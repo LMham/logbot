@@ -28,4 +28,3 @@ jobs:
           DISCORD_BOT_TOKEN: ${{ secrets.DISCORD_BOT_TOKEN }}  # เอาค่าจาก GitHub Secrets
         run: |
           python BotLOG.py
-```
