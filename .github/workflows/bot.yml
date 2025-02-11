@@ -28,3 +28,4 @@ jobs:
         python BotLOG.py
       env:
         DISCORD_BOT_TOKEN: ${{ secrets.DISCORD_BOT_TOKEN }}  # ใช้ Secret ที่ตั้งไว้ใน GitHub
+ 
