@@ -1,29 +1,30 @@
-name: Run Discord Bot
+name: Run Bot
 
 on:
   push:
     branches:
-      - main
-  pull_request:
-    branches:
-      - main
-  workflow_dispatch:  # ให้กด Run เองได้
+      - main  # หรือชื่อ branch ที่ต้องการให้ทำงาน
 
 jobs:
-  run-bot:
-    runs-on: ubuntu-latest  # ใช้เซิร์ฟเวอร์ Ubuntu
+  build:
+    runs-on: ubuntu-latest
+
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v3
+    - name: Checkout code
+      uses: actions/checkout@v2
 
-      - name: Setup Python
-        uses: actions/setup-python@v4
-        with:
-          python-version: "3.11"
+    - name: Set up Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: '3.11'
 
-      - name: Install dependencies
-        run: |
-          pip install -r requirements.txt
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install -r requirements.txt
 
-      - name: Run Discord Bot
-        run: python BotLOG.py
+    - name: Run Bot
+      run: |
+        python BotLOG.py
+      env:
+        DISCORD_BOT_TOKEN: ${{ secrets.DISCORD_BOT_TOKEN }}  # ใช้ Secret ที่ตั้งไว้
