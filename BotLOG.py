@@ -12,6 +12,7 @@ bot = commands.Bot(command_prefix="!", intents=intents)
 
 @bot.event
 async def on_ready():
-    print(f"✅ บอทออนไลน์แล้ว! ({bot.user})")
+    print(f"บอทกำลังออนไลน์แล้ว: {bot.user}")
+
 
 bot.run(TOKEN)
