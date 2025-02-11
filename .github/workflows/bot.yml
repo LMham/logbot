@@ -1,0 +1,29 @@
+name: Run Discord Bot
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+  workflow_dispatch:  # ให้กด Run เองได้
+
+jobs:
+  run-bot:
+    runs-on: ubuntu-latest  # ใช้เซิร์ฟเวอร์ Ubuntu
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Setup Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: |
+          pip install -r requirements.txt
+
+      - name: Run Discord Bot
+        run: python bot.py
