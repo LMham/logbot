@@ -25,6 +25,6 @@ jobs:
 
       - name: Run bot
         env:
-          DISCORD_BOT_TOKEN: ${{ secrets.DISCORD_BOT_TOKEN }}  # เอาค่าจาก GitHub Secrets
+          DISCORD_BOT_TOKEN: ${{ secrets.DISCORD_BOT_TOKEN }}  # ดึง Token จาก GitHub Secrets
         run: |
           python BotLOG.py
