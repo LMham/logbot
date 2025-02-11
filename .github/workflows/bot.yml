@@ -27,4 +27,4 @@ jobs:
       run: |
         python BotLOG.py
       env:
-        DISCORD_BOT_TOKEN: ${{ secrets.DISCORD_BOT_TOKEN }}  # ใช้ Secret ที่ตั้งไว้
+        DISCORD_BOT_TOKEN: MTMzODQ5NTQ1Mjg0NDI2NTUzMg.GZb3yR.XkBKC-qXGbdokLHTGekZBXCrLuy5I2DMXHPVIc  # ใช้ Secret ที่ตั้งไว้
