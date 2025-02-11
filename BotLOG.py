@@ -2,7 +2,7 @@ import discord
 from discord.ext import commands
 from discord.ui import View, Button
 
-TOKEN = "MTMzODQ5NTQ1Mjg0NDI2NTUzMg.Glg55p.jyKdiLtmc9qVbykTmgdJjImYzJMtErw7dJjFig"  # ใส่โทเคนบอทที่นี่
+TOKEN = "MTMzODQ5NTQ1Mjg0NDI2NTUzMg.GZb3yR.XkBKC-qXGbdokLHTGekZBXCrLuy5I2DMXHPVIc"  # ใส่โทเคนบอทที่นี่
 GUILD_ID = 1338426711196565544  # ใส่ไอดีเซิร์ฟเวอร์ที่ต้องการให้ทำงาน
 CHANNEL_ID = 1338496670375350403  # ใส่ไอดีช่องที่ต้องการให้บอทโพสต์ข้อความ
 ALERT_CHANNEL_ID = 1338499987809505280  # ใส่ไอดีช่องที่ต้องการให้แจ้งเตือน
